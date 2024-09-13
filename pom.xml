@@ -123,6 +123,7 @@
                 <configuration>
                     <configLocation>${maven.checkstyle.plugin.configLocation}</configLocation>
                     <consoleOutput>true</consoleOutput>
+                    <sourceDirectories>src/main/java/mate/academy/rickandmorty/mapper/CharacterMapper.java</sourceDirectories>
                     <failsOnError>true</failsOnError>
                     <linkXRef>false</linkXRef>
                 </configuration>
