@@ -18,13 +18,13 @@ public class CharactersController {
     private final CharacterService characterService;
 
     @Operation(summary = "Get one random character")
-    @GetMapping("/randomly")
+    @GetMapping("/random")
     public CharacterEntity randomCharacter() {
         return characterService.findRandom();
     }
 
     @Operation(summary = "Search characters by name")
-    @GetMapping("/search")
+    @GetMapping
     public List<CharacterEntity> searchByName(String name) {
         return characterService.findByName(name);
     }

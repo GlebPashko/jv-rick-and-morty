@@ -16,6 +16,7 @@ public class CharacterServiceImpl implements CharacterService {
     private final CharactersClient charactersClient;
     private final CharacterRepository characterRepository;
     private final CharacterMapper characterMapper;
+    private final Random random = new Random();
 
     @Override
     public void saveAll() {
@@ -34,7 +35,6 @@ public class CharacterServiceImpl implements CharacterService {
     }
 
     private long getRandomId() {
-        return new Random().nextLong(characterRepository.count());
+        return random.nextLong(characterRepository.count());
     }
 }
-
